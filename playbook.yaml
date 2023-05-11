@@ -1,0 +1,13 @@
+---
+- name: k8s demo
+  hosts: localhost
+  gather_facts: false
+  connection: local
+  vars:
+    myproject: "dev-tekton"
+  tasks:
+    - name: create pod
+      kubernetes.core.k8s:
+        src: pod.yaml
+        namespace: "{{ myproject }}"
+        state: present
