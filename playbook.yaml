@@ -2,7 +2,7 @@
 - name: k8s demo
   hosts: all
   gather_facts: false
-  connection: local
+  #connection: local
   vars:
     myproject: "dev-tekton"
   tasks:
