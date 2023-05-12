@@ -8,6 +8,8 @@
   tasks:
     - name: create pod
       kubernetes.core.k8s:
+        host: "https://api.useast1-dev.5qgs.p1.openshiftapps.com:6443"
+        api_key: ${{ secret.API_TOKEN }}
         src: pod.yaml
         namespace: "{{ myproject }}"
         state: present
