@@ -1,0 +1,10 @@
+replicaCount: 1
+
+image:
+  repository: quay.io/ennlight103/hello-world:latest  #replace with your image repository
+  pullPolicy: IfNotPresent
+  tag: ""  # defaults to the chart version
+
+service:
+  type: ClusterIP
+  port: 8080
