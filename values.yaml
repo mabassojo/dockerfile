@@ -1,9 +1,9 @@
 replicaCount: 1
 
 image:
-  repository: quay.io/ennlight103/hello-world:latest  #replace with your image repository
+  repository: quay.io/ennlight103/hello-world  #replace with your image repository
   pullPolicy: IfNotPresent
-  tag: ""  # defaults to the chart version
+  tag: "latest"  # defaults to the chart version
 
 service:
   type: ClusterIP
